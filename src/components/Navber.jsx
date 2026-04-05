@@ -9,29 +9,29 @@ const Navber = () => {
       <div className="flex gap-4 items-center text-2xl">
         <HiOutlineBars3BottomLeft />
         <div className="">
-          <ul className='flex gap-2'>
-            <li><a className='text-[16px]' href="#">Home</a></li>
-            <li><a className='text-[16px]' href="#">Collections</a></li>
-            <li><a className='text-[16px]' href="#">New</a></li>
+          <ul className='flex pl-4 gap-8'>
+            <li><a className='text-[16px] hover:text-[#767676]' href="#">Home</a></li>
+            <li><a className='text-[16px] hover:text-[#767676]' href="#">Collections</a></li>
+            <li><a className='text-[16px] hover:text-[#767676]' href="#">New</a></li>
           </ul>
         </div>
       </div>
       <div className="">
-        <img src={logo} alt="" />
+        <a href="#"><img src={logo} alt="" /></a>
       </div>
-      <div className="flex gap-4 items-center">
-        <div className="bg-[#262626] text-white rounded-full p-4">
+      <div className="flex gap-8 items-center">
+        <div className="bg-[#262626] text-white rounded-full p-4 cursor-pointer hover:bg-[#767676]">
           <FaRegHeart />
         </div>
         <div className="flex">
-          <div className="bg-[#262626] text-white rounded-3xl px-6 py-3.5"
+          <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-3xl px-6 py-3.5"
           >Cart
           </div>
-          <div className="bg-white rounded-full p-2.5 border-8 border-[#262626]">
+          <div className="bg-white cursor-pointer hover:border-[#767676] rounded-full p-2.5 border-8 border-[#262626]">
             <FiShoppingBag />
           </div>
         </div>
-        <div className="bg-[#262626] text-white rounded-full p-4">
+        <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-full p-4">
           <FaUser />
         </div>
       </div>

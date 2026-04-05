@@ -5,7 +5,7 @@ import Banner from './components/Banner'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-[#1e1e1e0f]'>
     <Container>
     <Navber/>
     <Banner/>
