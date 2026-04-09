@@ -10,7 +10,6 @@ const App = () => {
     <Container>
     <Navber/>
     <Banner/>
-    <New/>
     </Container>
     </div>
   )
