@@ -1,16 +1,7 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-const New = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
-  };
+import  {Data}  from './ApiData';
+ const SlickSlider = Slider.default ? Slider.default : Slider;
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -26,13 +17,29 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      className=""
       onClick={onClick}
     />
   );
 }
 
+const New = () => {
+ let {info, loading} = useContext(Data)
+  const settings = {
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
+
+ if (loading){
+        return (
+          <div className=" flex justify-center flex-row gap-2">
+            <div className="loader"></div>
+          </div>
+        )
+    }
   return (
     <div>
       <div className="">
@@ -40,26 +47,21 @@ function SamplePrevArrow(props) {
       </div>
       <div className="">
         <div className="slider-container">
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
+      <SlickSlider  {...settings}>
+        {info.map((item) => (
+    <a href="#">
+      <div key={item.id} className="p-4 relative">
+      <div className=" p-3">
+        <img src={item.thumbnail} alt="" className="w-full h-80 object-cover"/>
+        <div className="flex justify-between items-center">
+          <h3 className="text-lg font-bold ">{item.title.slice(0, 20)}</h3>
+        <p className="text-blue-500">${item.price}</p>
         </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+      </div>
+    </div>
+    </a>
+  ))}
+      </SlickSlider>
     </div>
       </div>
     </div>
