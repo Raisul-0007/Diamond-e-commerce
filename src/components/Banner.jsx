@@ -13,7 +13,7 @@ const Banner = () => {
   return (
     <div className='flex py-15 relative'>
         <div className="w-2/6">
-          <h1 className='text-5xl font-bold'> New <span className='block'> Collection</span></h1>
+          <h1 className='text-[55px] leading-14 font-bold uppercase'> New <span className='block'> Collection</span></h1>
           <p className='leading-5.5 pt-3 '>Summer <span className='block'>2026</span></p>
           <div className="absolute bottom-15 left-0">
             <a className='w-70 px-5 py-2  flex justify-between items-center rounded-sm bg-[#00000020] hover:text-[#767676]' href="#">

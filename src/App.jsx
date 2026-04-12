@@ -7,7 +7,7 @@ import Old from './components/Old'
 
 const App = () => {
   return (
-    <div className='bg-[#1e1e1e0f]'>
+    <div className='bg-[#d7d7d766]'>
     <Container>
     <Navber/>
     <Banner/>
