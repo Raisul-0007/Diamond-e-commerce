@@ -4,6 +4,8 @@ import Container from './components/Container'
 import Banner from './components/Banner'
 import New from './components/New'
 import Old from './components/Old'
+import Approach from './components/Approach'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
     <Banner/>
     <New/>
     <Old/>
+    <Approach/>
+    <Footer/>
     </Container>
     </div>
   )

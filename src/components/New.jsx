@@ -9,7 +9,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className="absolute right-[47%] -bottom-10 z-100 p-3 border border-[#A3A3A3] cursor-pointer"
+      className="absolute right-[47%] -bottom-10 z-100 p-3 border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
       onClick={onClick}
     ><VscChevronRight /></div>
   );
@@ -19,7 +19,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className='absolute left-[46%] -bottom-10  z-50 p-3  border border-[#A3A3A3] cursor-pointer'
+      className='absolute left-[46%] -bottom-10  z-50 p-3  border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300'
       onClick={onClick}
     ><VscChevronLeft /></div>
   );
