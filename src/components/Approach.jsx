@@ -5,6 +5,7 @@ const Approach = () => {
   return (
     <div>
       Approach
+      <div className="">Ami</div>
     </div>
   )
 }
