@@ -3,6 +3,7 @@ import { useContext} from 'react'
 import Slider from "react-slick";
 import  {Data}  from './ApiData';
 import { VscChevronLeft, VscChevronRight } from 'react-icons/vsc';
+import Container from './Container';
 
 const SlickSlider = Slider.default ? Slider.default : Slider;
 
@@ -37,7 +38,8 @@ const Old = () => {
   };
   return (
     <div className='py-15'>
-      <div className="flex justify-between items-end">
+      <Container>
+        <div className="flex justify-between items-end">
         <div className="text-5xl font-bold uppercase">
           <h2 >XIV </h2> 
           <div className="relative">
@@ -66,6 +68,7 @@ const Old = () => {
   ))}
       </SlickSlider>
     </div>
+      </Container>
     </div>
   )
 }

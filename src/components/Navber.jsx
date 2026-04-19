@@ -3,9 +3,12 @@ import { HiOutlineBars3BottomLeft } from 'react-icons/hi2'
 import logo from "../assets/logo.png"
 import { FaRegHeart, FaUser } from 'react-icons/fa'
 import { FiShoppingBag } from "react-icons/fi";
+import Container from './Container';
 const Navber = () => {
   return (
-    <div className='flex justify-between items-center'>
+    <div className="">
+      <Container>
+        <div className='flex justify-between items-center'>
       <div className="flex gap-4 items-center text-2xl">
         <HiOutlineBars3BottomLeft />
         <div className="">
@@ -35,6 +38,8 @@ const Navber = () => {
           <FaUser />
         </div>
       </div>
+    </div>
+      </Container>
     </div>
   )
 }
