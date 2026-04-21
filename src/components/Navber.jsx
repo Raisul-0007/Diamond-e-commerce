@@ -4,6 +4,7 @@ import logo from "../assets/logo.png"
 import { FaRegHeart, FaUser } from 'react-icons/fa'
 import { FiShoppingBag } from "react-icons/fi";
 import Container from './Container';
+import Shop from './../Pages/Shop';
 const Navber = () => {
   return (
     <div className="">
@@ -14,6 +15,7 @@ const Navber = () => {
         <div className="">
           <ul className='flex pl-4 gap-8'>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">Home</a></li>
+            <li><a className='text-[16px] hover:text-[#767676]' href={Shop}>Shop</a></li>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">Collections</a></li>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">New</a></li>
           </ul>
