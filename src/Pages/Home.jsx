@@ -9,12 +9,10 @@ import Footer from './../components/Footer';
 const Home = () => {
   return (
     <div className='bg-[#d7d7d766]'>
-    <Navber/>
     <Banner/>
     <New/>
     <Old/>
     <Approach/>
-    <Footer/>
     </div>
   )
 }

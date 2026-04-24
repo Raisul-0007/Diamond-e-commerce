@@ -16,8 +16,8 @@ const Navber = () => {
         <HiOutlineBars3BottomLeft />
         <div className="">
           <ul className='flex pl-4 gap-8'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shop" className='text-[16px] hover:text-[#767676]' >Shop</Link></li>
+            <li><Link className='text-[16px] hover:text-[#767676]' to="/">Home</Link></li>
+            <li><Link  className='text-[16px] hover:text-[#767676]' to="/shop">Shop</Link></li>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">Collections</a></li>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">New</a></li>
           </ul>
