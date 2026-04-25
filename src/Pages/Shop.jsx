@@ -4,6 +4,7 @@ import { AiOutlinePlus } from 'react-icons/ai'
 import Container from '../components/Container'
 import { SlArrowRight } from 'react-icons/sl'
 import { Data } from '../components/ApiData'
+import Filter from '../components/Filter'
 
 
 const Shop = () => {
@@ -25,7 +26,7 @@ const Shop = () => {
         <div className="py-5">
           <p className='text-[#767676] text-sm flex items-center gap-1'>Home < SlArrowRight /> Products</p>
         </div>
-        <div className="flex">
+        <div className="flex gap-5">
         <div className="w-1/4">
            <div className="">
         <h2>
@@ -57,13 +58,7 @@ const Shop = () => {
     </div>
         </div>
         <div className="w-3/4">
-            <div className="">
-                {filterCategory.map((item) => (
-  <p key={item.id}>
-    {item.title}
-  </p>
-                ))}
-            </div>
+        <Filter filterCategory={filterCategory}/>
         </div>
         </div>
       </Container>
