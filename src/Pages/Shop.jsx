@@ -6,20 +6,27 @@ import { SlArrowRight } from 'react-icons/sl'
 import { Data } from '../components/ApiData'
 import Filter from '../components/Filter'
 
-
 const Shop = () => {
   let {info} = useContext(Data)
 
-    let [cate,cateShow] =useState(true)
+    let [cate, cateShow] =useState(true)
     let [cateSet, cateSetShow] = useState([])
-     let [filterCategory,setfilterCategory] = useState([])
+    let [filterCategory, setfilterCategory] = useState([])
     useEffect(()=>{
         cateSetShow([...new Set(info.map((item)=>item.category))])
     },[info])
     let HandleCategory = (cItem)=>{
-        let filterItem = info.filter((item)=>item.category == cItem)
+        let filterItem = info.filter((item)=>item.category === cItem)
         setfilterCategory(filterItem)
     }
+
+     let HandleAllProduct = ()=> {
+        setfilterCategory(info)
+    }
+
+    useEffect(()=>{
+  setfilterCategory(info)
+}, [info])
   return (
     <div>
       <Container>
@@ -33,7 +40,7 @@ const Shop = () => {
             Filter
         </h2>
     <div className="">
-        <div onClick={(()=>{cateShow(!cate)})} className="flex justify-between border items-center">
+        <div onClick={()=> cateShow(!cate)} className="flex justify-between border items-center">
             <h3 className='text-20'>Category</h3>
             <div className="py-3 font-dm text-[20px]">
                    {cate ? <MdArrowDropUp/> : <MdArrowDropDown/>}
@@ -42,6 +49,12 @@ const Shop = () => {
         <div className="">
             {cate && (
             <ul>
+                <li onClick={HandleAllProduct} className='flex justify-between py-2'>
+                    <p className='font-dm text-[16px] text-[#767676]'> All Product</p>
+                    <div className="p-1">
+                        <AiOutlinePlus/>
+                    </div>
+                </li>
             {cateSet.map((item)=>(
                 <li key={item} onClick={()=>{HandleCategory(item)}} className='flex justify-between py-2'>
                     <p className='font-dm text-[16px] text-[#767676]'> {item}</p>
