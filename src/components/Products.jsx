@@ -11,7 +11,7 @@ const Products = ({active, allPage}) => {
         <div className="">
           {allPage?.map ((item)=>(
           <div key={item.id} className="py-5 px-5 my-2 border border-[#D7D7D7] rounded-2xl">
-          <Link className="flex gap-5 justify-between " to="#">
+          <Link className="flex gap-5 justify-between " to={`/Shop/${item.id}`}>
           <div className="w-1/5">
             <img className=" h-35 w-35 object-cover bg-white border border-[#D7D7D7]" src={item.thumbnail} alt="" />
           </div>
@@ -30,7 +30,7 @@ const Products = ({active, allPage}) => {
         <div className="flex flex-wrap">
             {allPage?.map ((item)=>(
            <div key={item.id} className="w-1/3 px-5">
-                <Link className='p-4' to="#">
+                <Link className='p-4' to={`/Shop/${item.id}`}>
         <img src={item.thumbnail} alt="" className="w-full h-90  object-cover bg-white border border-[#D7D7D7]"/>
 
           <p className="text-[#00000067] pt-2">{item.category.slice(0, 10)}</p>
