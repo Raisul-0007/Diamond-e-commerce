@@ -46,7 +46,8 @@ useEffect(() => {
         </div>
         <div className="flex gap-5 justify-center">
           <Link className='px-5 py-2 border border-[#262626] bg-[#262626] hover:bg-[#767676] rounded-[20px] text-white' to="">Add To Cart</Link>
-          <Link className='px-5 py-2 border border-[#262626] hover:bg-[#262626] rounded-[20px] hover:text-white' to="">Add To Favourite</Link>        </div>
+          <Link className='px-5 py-2 border border-[#262626] hover:bg-[#262626] rounded-[20px] hover:text-white' to="">Add To Favourite</Link>        
+        </div>
         </div>
       </div>
     </div>
