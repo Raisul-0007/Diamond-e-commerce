@@ -31,8 +31,8 @@ const Navber = () => {
           <FaRegHeart />
         </div>
         <div className="flex">
-          <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-3xl px-6 py-3.5"
-          >Cart
+          <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-3xl px-6 py-3.5">
+            <Link to="/cart">Cart</Link>
           </div>
           <div className="bg-white cursor-pointer hover:border-[#767676] rounded-full p-2.5 border-8 border-[#262626]">
             <FiShoppingBag />

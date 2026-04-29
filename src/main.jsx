@@ -5,10 +5,12 @@ import ReactDOM from "react-dom/client";
 import  {ApiData}  from './components/ApiData.jsx'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+import { Provider } from "react-redux";
+import { store } from "./store.js";
+createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
     <ApiData>
     <App />
     </ApiData>
-  </React.StrictMode>
+  </Provider>
 )

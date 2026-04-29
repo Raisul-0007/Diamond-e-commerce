@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from 'react-icons/io'
+import { useDispatch } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
+import { addToCart } from '../components/product/productSlice'
 const ProductDetails = () => {
    window.scrollTo(0,0)
+   let dispatch = useDispatch()
+
    let productsId = useParams()
    let [oneProduct, setOneProduct] = useState([])
    let singleProduct = async () => {
@@ -28,6 +32,10 @@ let clientRating = Array.from({length: 5}, (_, index)=>{
 useEffect(() => {
     singleProduct()
 }, [productsId.id])
+
+let handleCart = () =>{
+  dispatch(addToCart(oneProduct))
+}
   return (
     <div className='flex gap-5 py-20 '>
       <div className="w-1/2">
@@ -45,7 +53,7 @@ useEffect(() => {
           <p>{oneProduct?.description}</p>
         </div>
         <div className="flex gap-5 justify-center">
-          <Link className='px-5 py-2 border border-[#262626] bg-[#262626] hover:bg-[#767676] rounded-[20px] text-white' to="">Add To Cart</Link>
+          <button onClick={()=> handleCart(oneProduct)} className='px-5 py-2 border border-[#262626] bg-[#262626] hover:bg-[#767676] rounded-[20px] text-white' >Add To Cart</button>
           <Link className='px-5 py-2 border border-[#262626] hover:bg-[#262626] rounded-[20px] hover:text-white' to="">Add To Favourite</Link>        
         </div>
         </div>

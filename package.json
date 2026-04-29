@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "axios": "^1.15.2",
     "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.17",
