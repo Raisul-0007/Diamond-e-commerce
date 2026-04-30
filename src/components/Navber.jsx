@@ -19,7 +19,7 @@ const Navber = () => {
             <li><Link className='text-[16px] hover:text-[#767676]' to="/">Home</Link></li>
             <li><Link  className='text-[16px] hover:text-[#767676]' to="/shop">Shop</Link></li>
             <li><a className='text-[16px] hover:text-[#767676]' href="#">Collections</a></li>
-            <li><a className='text-[16px] hover:text-[#767676]' href="#">New</a></li>
+            <li><Link className='text-[16px] hover:text-[#767676]' to="/cart">Cart</Link></li>
           </ul>
         </div>
       </div>
