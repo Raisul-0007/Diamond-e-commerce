@@ -29,7 +29,7 @@ const Cart = () => {
         {cartData.length > 0 ? 
         (cartData.map((item)=>(
         <div className="flex items-center border border-[#7676763e] rounded-2xl p-5">
-        <div className="w-2/3 flex items-center gap-5">
+        <div className="w-2/3 flex items-center justify-between">
         <div onClick={()=>handleRemove(item)} >
             <div className="p-1 border border-[#7676763e] hover:bg-[#76767607] cursor-pointer"><RxCross2/></div>
           </div>
@@ -39,14 +39,15 @@ const Cart = () => {
         <div className="">
           <h3>{item.title}</h3>
         </div>
-        </div>
-        <div className="w-1/3 flex items-center gap-20">
-        <div className="flex items-center gap-3">
+         <div className="flex items-center gap-3">
           <button onClick={()=>handlePlus(item)} className="p-1 border border-[#7676763e] hover:bg-[#76767607] cursor-pointer"><FiPlus/></button>
           <div className="">{item.qun}</div>
           <button onClick={()=>handleMinus(item)} className="p-1 border border-[#7676763e] hover:bg-[#76767607] cursor-pointer"><FiMinus/></button>
         </div>
+        </div>
+        <div className="w-1/3 flex items-center gap-20">
           <h5>${item.price}</h5>
+          <h6>${item.qun * item.price}</h6>
         </div>
         </div>
       ))):
