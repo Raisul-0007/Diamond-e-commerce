@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineBars3BottomLeft } from 'react-icons/hi2'
 import logo from "../assets/logo.png"
 import { FaRegHeart, FaUser } from 'react-icons/fa'
@@ -10,12 +10,27 @@ import { useSelector } from 'react-redux';
 
 const Navber = () => {
    let addToCart = useSelector((state)=>state.product.cartItem)
+
+   let [sticky, setsticky] = useState(false)
+
+   useEffect(()=>{
+    const handleScroll = ()=>{
+      if(window.scrollY > 50){
+        setsticky(true)
+      }else{
+        setsticky(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+
+   return ()=> window.removeEventListener("scroll", handleScroll)
+   },[])
+
   return (
-    <div className=" fixed top-0 left-0 w-full z-999 py-5 bg-white border-b border-[#767676cd]">
+    <div className= {`w-full py-5 bg-white border-b border-[#767676cd] transition-all duration-1000 ease-in-out ${sticky ? "fixed top-0 left-0 z-999 shadow-lg " : "relative"}`}>
       <Container>
         <div className='flex justify-between items-center'>
-      <div className="flex gap-4 items-center text-2xl">
-        <HiOutlineBars3BottomLeft />
+      <div className="hidden lg:flex gap-4 items-center text-2xl">
         <div className="">
           <ul className='flex pl-4 gap-8'>
             <li><Link className='text-[16px] hover:text-[#767676]' to="/">Home</Link></li>
