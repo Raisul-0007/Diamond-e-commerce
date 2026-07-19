@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { HiOutlineBars3BottomLeft } from 'react-icons/hi2'
 import logo from "../assets/logo.png"
 import { FaRegHeart, FaUser } from 'react-icons/fa'
@@ -26,6 +26,20 @@ const Navber = () => {
    return ()=> window.removeEventListener("scroll", handleScroll)
    },[])
    let [menu, setMenu] = useState(false)
+
+   const menuRef = useRef()
+
+   useEffect(()=>{
+    const handleClick = ()=>{
+      if(menuRef.current && !menuRef.current.contains(event.target)){
+        setMenu(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClick)
+    return()=>{
+      document.removeEventListener("mousedown", handleClick)
+    }
+   },[])
   return (
     <div className= {`w-full py-5 bg-white border-b border-[#767676cd] transition-all duration-1000 ease-in-out ${sticky ? "fixed top-0 left-0 z-999 shadow-lg " : "relative"}`}>
       <Container>
@@ -41,7 +55,7 @@ const Navber = () => {
           </ul>
         </div>
       </div>
-      <div className="lg:hidden relative">
+      <div ref={menuRef} className="lg:hidden relative">
         <button onClick={()=> setMenu(!menu)}> 
           <HiOutlineBars3BottomLeft />
         </button>
@@ -56,14 +70,15 @@ const Navber = () => {
       </div>
       </div>
       <div className="w-1/3 flex justify-center">
-        <a href="#"><img src={logo} alt="" /></a>
+        <a href="#"><img className="lg:w-full w-8" src={logo} alt="" /></a>
       </div>
-      <div className="w-1/3 flex justify-end gap-8 items-center">
-        <div className="bg-[#262626] text-white rounded-full p-4 cursor-pointer hover:bg-[#767676]">
+      <div className="w-1/3 flex justify-end lg:gap-8 items-center">
+        <div className="bg-[#262626] text-white rounded-full lg:p-4 p-2.5 lg:text-[16px] text-[10px] cursor-pointer hover:bg-[#767676] ">
           <FaRegHeart />
         </div>
         <div className="flex lg:gap-3 justify-between">
-          <Link className="bg-[#262626]  relative cursor-pointer hover:bg-[#767676] text-white rounded-3xl px-6 py-3.5" to="/cart">
+          <div className="bg-[#262626]  relative cursor-pointer hover:bg-[#767676] inline text-white rounded-3xl lg:px-6 lg:py-3 py-2 px-3 lg:text-[16px] text-[10px]">
+          <Link className="" to="/cart">
             <h2>Cart</h2>
             {addToCart.length > 0 &&
             <div className="absolute top-[-5px] right-[-5px] bg-[#FF0000] text-white rounded-full w-6 h-6 flex items-center justify-center">
@@ -71,11 +86,9 @@ const Navber = () => {
             </div>
             }
           </Link>
-          <div className="bg-white cursor-pointer hover:border-[#767676] rounded-full p-2.5 border-8 border-[#262626]">
-            <FiShoppingBag />
           </div>
         </div>
-        <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-full p-4">
+        <div className="bg-[#262626] cursor-pointer hover:bg-[#767676] text-white rounded-full lg:p-4 p-2.5 lg:text-[16px] text-[10px]">
           <FaUser />
         </div>
       </div>

@@ -10,7 +10,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className="absolute right-[47%] -bottom-10 z-100 p-3 border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
+      className="absolute lg:right-[47%] right-[45%] -bottom-10 z-100lg:p-3 p-1 lg:text-[16px] text-[12px] border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
       onClick={onClick}
     ><VscChevronRight /></div>
   );
@@ -20,7 +20,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className='absolute left-[46%] -bottom-10  z-50 p-3  border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300'
+      className='absolute lg:left-[46%] left-[45%] -bottom-10  z-50 lg:p-3 p-1 lg:text-[16px] text-[12px]  border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300'
       onClick={onClick}
     ><VscChevronLeft /></div>
   );
@@ -40,7 +40,7 @@ const New = () => {
     <div className='py-10'>
       <Container>
         <div className="flex justify-between items-end">
-        <div className="text-6xl font-bold uppercase">
+        <div className="lg:text-6xl text-3xl font-bold uppercase">
           <h2 >New </h2> 
           <div className="relative">
             <span className='block'>This week</span> 
