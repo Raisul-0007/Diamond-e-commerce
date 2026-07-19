@@ -13,13 +13,13 @@ const Banner = () => {
         )
     }
   return (
-    <div className=" py-15 px-2">
+    <div className=" py-15">
       <Container>
         <div className='flex flex-wrap  relative'>
         <div className="lg:w-1/3">
           <h1 className='lg:text-6xl text-4xl lg:leading-14 font-bold uppercase'> New <span className='block'> Collection</span></h1>
           <p className='lg:leading-5.5 pt-3 '>Summer <span className='block'>2026</span></p>
-          <div className="absolute lg:bottom-15 bottom-[50%] left-0">
+          <div className="lg:absolute bottom-15  left-0">
             <Link to="/shop" className='lg:w-70 w-50 px-5 py-2  flex justify-between items-center lg:text-[16px] text-[10px] rounded-sm bg-[#00000020] hover:text-[#767676]' href="#">
               Go To Shop
               <BsArrowRight />
