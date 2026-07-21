@@ -6,11 +6,11 @@ import four from '../assets/Approach-4.png'
 import Container from './Container';
 const Approach = () => {
   return (
-    <div className='py-30'>
+    <div className='lg:py-30'>
       <Container>
       <div className="">
-        <h2 className="text-5xl font-bold uppercase text-center">Our Approach to fashion design </h2>
-        <p className='w-150 mx-auto text-center text-xl py-3'>at elegant vogue , we blend creativity with craftsmanship to create fashion that transcends trends and stands the test of time each design is meticulously crafted, ensuring the highest quelity exqulsite finish</p>
+        <h2 className="lg:text-5xl text-3xl font-bold uppercase text-center">Our Approach to fashion design </h2>
+        <p className='lg:w-150 mx-auto text-center lg:text-xl py-3'>at elegant vogue , we blend creativity with craftsmanship to create fashion that transcends trends and stands the test of time each design is meticulously crafted, ensuring the highest quelity exqulsite finish</p>
       </div>
       <div className="py-20 flex justify-between">
         <div className="">

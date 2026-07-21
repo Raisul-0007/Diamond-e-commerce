@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
   const {  onClick } = props;
   return (
     <div
-      className="absolute lg:right-[47%] right-[44%] -bottom-10 z-100 lg:p-3 p-1 border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
+      className="absolute lg:right-[47%] right-[43%] -bottom-10 z-100 lg:p-3 p-1 border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
       onClick={onClick}
     ><VscChevronRight /></div>
   );
