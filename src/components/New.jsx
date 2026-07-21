@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className="absolute lg:right-[47%] right-[43%] -bottom-10 z-100 lg:p-3 p-1 lg:text-[16px] text-[12px] border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
+      className="absolute lg:right-[47%] right-[43%] -bottom-10 z-100 lg:p-3 p-1 border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300"
       onClick={onClick}
     ><VscChevronRight /></div>
   );
@@ -21,7 +21,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className='absolute lg:left-[46%] left-[43%] -bottom-10  z-50 lg:p-3 p-1 lg:text-[16px] text-[12px]  border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300'
+      className='absolute lg:left-[46%] left-[43%] -bottom-10  z-50 lg:p-3 p-1   border border-[#A3A3A3] text-[#A3A3A3] cursor-pointer hover:text-black hover:border-black hover:font-bold ease-in-out duration-300'
       onClick={onClick}
     ><VscChevronLeft /></div>
   );
@@ -67,7 +67,7 @@ const New = () => {
             </p>
           </div>
         </div>
-        <div className="text-[#5E5E5E] cursor-pointer">
+        <div className="text-[#5E5E5E] cursor-pointer lg:text-[16px] text-[14px]">
           <Link to="/shop">See All</Link>
         </div>
       </div>
@@ -78,7 +78,7 @@ const New = () => {
         <img src={item.thumbnail} alt="" className="w-full lg:h-90 h-70  object-cover bg-white border border-[#D7D7D7]"/>
 
           <p className="text-[#00000067] pt-2">{item.category.slice(0, 10)}</p>
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between  ">
           <h3 className="text-lg font-semibold ">{item.title.slice(0, 20)}</h3>
           <p className="font-semibold pr-2">${item.price}</p>
         </div>
