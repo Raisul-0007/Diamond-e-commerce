@@ -3,10 +3,10 @@ import Container from './Container'
 import logo from "../assets/logo.png"
 const Footer = () => {
   return (
-    <div className='bg-[#F5F5F5] py-30'>
-      <Container className="flex">
-        <div className="w-1/2">
-        <div className="">
+    <div className='bg-[#F5F5F5] lg:py-30'>
+      <Container className="lg:flex">
+        <div className="lg:w-1/2 lg:block flex justify-around">
+        <div className="py-5">
           <p className='text-[#1e1e1e5f] py-10'>info</p>
         <div className="">
           <ul className='leading-6'>
@@ -16,7 +16,7 @@ const Footer = () => {
           </ul>
         </div>
         </div>
-        <div className="py-10">
+        <div className="py-5">
           <p className='text-[#1e1e1e5f] py-10'>Languages</p>
         <div className="">
           <ul className='leading-6'>
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         </div>
       </div>
-      <div className="w-1/2 ">
+      <div className="lg:w-1/2 ">
        <p className='py-20 text-[#7676765f]'>Technologies</p>
       <div className="flex items-center gap-20">
         <div className="relative">
