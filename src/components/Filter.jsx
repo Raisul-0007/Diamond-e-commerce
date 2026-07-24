@@ -45,17 +45,17 @@ const Filter = ({filterCategory}) => {
   return (
     <div>
       <div className="flex justify-between">
-        <div className="flex gap-3">
-          <div onClick={()=>setActive("")} className={`${active == "active" ? "p-2 border border-white" : " p-2 border border-[#767676]"}`}>
+        <div className="flex lg:gap-3 gap-0.5">
+          <div onClick={()=>setActive("")} className={`lg:text-[16px] text-[12px] p-2 ${active == "active" ? " border border-white" : " border border-[#767676]"}`}>
             <FaTableCellsLarge/>
           </div>
-          <div onClick={HandleActive} className={`${active == "active" ? " p-2 border border-[#767676]" : "p-2 border border-white "}`}>
+          <div onClick={HandleActive} className={`lg:text-[16px] text-[12px] p-2 ${active == "active" ? "  border border-[#767676]" : " border border-white "}`}>
             <FaListUl/>
           </div>
         </div>
-        <div className="flex px-4 gap-3 items-center">
-          <p className='font-dm text-[16px] text-[#767676]'>Show:</p>
-          <select onChange={HandlePageNumber} className='cursor-pointer font-dm text-[14px] text-[#767676] border-1 border-[#737373] py-2 pr-[50px]' name="" id="">
+        <div className="flex px-4 lg:gap-3 gap-1 items-center">
+          <p className='font-dm lg:text-[16px] text-[12px] text-[#767676]'>Show:</p>
+          <select onChange={HandlePageNumber} className='cursor-pointer font-dm lg:text-[14px] text-[#767676] border-1 border-[#737373] lg:py-2 py-0.5 lg:pr-12.5 pr-7 text-[12px]' name="" id="">
           <option value="9">9</option>
           <option value="12">12</option>
           <option value="15">15</option>
